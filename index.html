@@ -2,507 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IELTS Academic Mock Exam - Band 5 to 7 Practice</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>IELTS Academic Mock Exam - Full Test Booklet</title>
     <style>
-        :root {
-            --bg-primary: #0f172a;
-            --bg-secondary: #1e293b;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --accent: #8b5cf6;
-            --accent-hover: #7c3aed;
-            --border: #334155;
-            --success: #10b981;
-            --warning: #f59e0b;
-            --error: #ef4444;
-            --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-        }
-
-        .light-mode {
-            --bg-primary: #f8fafc;
-            --bg-secondary: #ffffff;
-            --text-primary: #0f172a;
-            --text-secondary: #475569;
-            --accent: #6366f1;
-            --accent-hover: #4f46e5;
-            --border: #e2e8f0;
-            --success: #059669;
-            --warning: #d97706;
-            --error: #dc2626;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
-        }
-
         body {
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
-            padding-bottom: 60px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 12pt;
+            line-height: 1.5;
+            color: #000;
+            background-color: #fff;
+            padding: 2cm;
+            max-width: 21cm;
+            margin: 0 auto;
         }
 
         h1, h2, h3, h4 {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 600;
-            margin-bottom: 1rem;
+            font-family: Arial, sans-serif;
+            page-break-after: avoid;
         }
 
-        header {
-            background-color: var(--bg-secondary);
-            border-bottom: 1px solid var(--border);
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        h1 {
+            text-align: center;
+            font-size: 20pt;
+            margin-bottom: 2cm;
+            border-bottom: 2px solid #000;
+            padding-bottom: 0.5cm;
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            font-family: 'Outfit', sans-serif;
-            color: var(--accent);
+        h2 {
+            font-size: 14pt;
+            margin-top: 1cm;
+            border-bottom: 1px solid #000;
+            padding-bottom: 0.2cm;
         }
 
-        .theme-toggle {
-            background: none;
-            border: 1px solid var(--border);
-            color: var(--text-primary);
-            padding: 0.5rem 1rem;
-            border-radius: 9999px;
-            cursor: pointer;
-            font-size: 0.875rem;
+        .page-break {
+            page-break-before: always;
         }
 
-        .container {
-            max-width: 1400px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-        }
-
-        .nav-tabs {
-            display: flex;
-            gap: 0.5rem;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 1px;
-            margin-bottom: 2rem;
-            overflow-x: auto;
-        }
-
-        .tab-btn {
-            background: none;
-            border: none;
-            color: var(--text-secondary);
-            padding: 1rem 1.5rem;
-            font-weight: 500;
-            font-size: 1rem;
-            cursor: pointer;
-            border-bottom: 3px solid transparent;
-            white-space: nowrap;
-        }
-
-        .tab-btn:hover {
-            color: var(--text-primary);
-        }
-
-        .tab-btn.active {
-            color: var(--accent);
-            border-bottom-color: var(--accent);
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        /* Reading split layout */
-        .split-layout {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 2rem;
-            height: calc(100vh - 250px);
-        }
-
-        @media (max-width: 1024px) {
-            .split-layout {
-                grid-template-columns: 1fr;
-                height: auto;
-            }
-        }
-
-        .pane-passage {
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 2rem;
-            overflow-y: auto;
-            height: 100%;
-        }
-
-        .pane-questions {
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 2rem;
-            overflow-y: auto;
-            height: 100%;
-        }
-
-        /* Generic formatting rules */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 1.5rem 0;
+            margin: 1rem 0;
+            page-break-inside: avoid;
         }
 
         th, td {
-            border: 1px solid var(--border);
-            padding: 0.75rem 1rem;
+            border: 1px solid #000;
+            padding: 0.5rem;
             text-align: left;
         }
 
         th {
-            background-color: var(--bg-primary);
-            font-weight: 600;
+            background-color: #f2f2f2;
+        }
+
+        blockquote {
+            border-left: 3px solid #000;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
         }
 
         .alert-box {
-            border-left: 4px solid var(--accent);
-            background-color: var(--bg-primary);
-            padding: 1rem 1.5rem;
-            border-radius: 0 8px 8px 0;
-            margin: 1.5rem 0;
+            border: 1px solid #000;
+            padding: 1rem;
+            margin: 1rem 0;
+            background-color: #f9f9f9;
         }
 
-        .alert-important { border-left-color: var(--accent); }
-        .alert-note { border-left-color: var(--success); }
-        .alert-tip { border-left-color: var(--warning); }
-        .alert-warning { border-left-color: var(--error); }
-        .alert-caution { border-left-color: var(--error); }
-
-        .info-blockquote {
-            border-left: 4px solid var(--border);
-            padding-left: 1rem;
-            font-style: italic;
-            color: var(--text-secondary);
-            margin: 1.5rem 0;
-        }
-
-        /* Audio simulation player style */
-        .listening-player {
-            background: linear-gradient(135deg, var(--accent), var(--accent-hover));
-            color: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .player-left {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .play-btn {
-            background-color: white;
-            color: var(--accent);
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 1.25rem;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2);
-        }
-
-        .player-track {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .track-bar {
-            height: 6px;
-            background-color: rgba(255, 255, 255, 0.3);
-            border-radius: 9999px;
-            position: relative;
-            cursor: pointer;
-        }
-
-        .track-progress {
-            height: 100%;
-            width: 0%;
-            background-color: white;
-            border-radius: 9999px;
-        }
-
-        /* Form styling */
-        .q-input {
-            background-color: var(--bg-primary);
-            border: 1px solid var(--border);
-            color: var(--text-primary);
-            padding: 0.4rem 0.8rem;
-            border-radius: 4px;
-            font-size: 0.95rem;
-            margin: 0.2rem 0.2rem;
-            outline: none;
-        }
-
-        .q-input:focus {
-            border-color: var(--accent);
-        }
-
-        .q-row {
-            margin-bottom: 1.2rem;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .q-number {
-            font-weight: 700;
-            color: var(--accent);
-            min-width: 25px;
-        }
-
-        .transcript-container {
-            margin-top: 2rem;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .transcript-header {
-            background-color: var(--bg-primary);
-            padding: 1rem 1.5rem;
-            cursor: pointer;
-            font-weight: 600;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .transcript-body {
-            padding: 1.5rem;
-            display: none;
-            background-color: var(--bg-secondary);
-            border-top: 1px solid var(--border);
-            max-height: 400px;
-            overflow-y: auto;
-        }
-
-        /* Checker style */
-        .correct-ans {
-            border-color: var(--success) !important;
-            background-color: rgba(16, 185, 129, 0.1) !important;
-        }
-
-        .wrong-ans {
-            border-color: var(--error) !important;
-            background-color: rgba(239, 68, 68, 0.1) !important;
-        }
-
-        .feedback-message {
-            font-size: 0.85rem;
-            margin-left: 0.5rem;
-        }
-
-        .feedback-correct { color: var(--success); }
-        .feedback-wrong { color: var(--error); }
-
-        .btn {
-            background-color: var(--accent);
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            font-size: 1rem;
-            display: inline-block;
-            margin-top: 1.5rem;
-        }
-
-        .btn:hover {
-            background-color: var(--accent-hover);
-        }
-
-        /* Score calculator styling */
-        .calculator-card {
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 2rem;
-            max-width: 600px;
-            margin: 2rem 0;
-        }
-
-        .calc-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .calc-input {
-            width: 80px;
-            padding: 0.5rem;
-            background-color: var(--bg-primary);
-            border: 1px solid var(--border);
-            color: var(--text-primary);
-            border-radius: 6px;
-            text-align: center;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .overall-score-display {
-            text-align: center;
-            padding: 1.5rem;
-            background-color: var(--bg-primary);
-            border-radius: 8px;
-            margin-top: 2rem;
-            border: 2px dashed var(--accent);
-        }
-
-        .overall-band {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--accent);
-            font-family: 'Outfit', sans-serif;
-            margin-top: 0.5rem;
-        }
-
-        /* Image styling */
         .bar-chart-img {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
-            border: 1px solid var(--border);
+            border: 1px solid #000;
             margin: 1.5rem 0;
             display: block;
         }
 
-        /* Writing essay textareas */
-        .essay-textarea {
-            width: 100%;
-            height: 250px;
-            background-color: var(--bg-primary);
-            border: 1px solid var(--border);
-            color: var(--text-primary);
-            padding: 1rem;
-            border-radius: 8px;
-            font-size: 1rem;
-            line-height: 1.5;
-            resize: vertical;
-            margin-top: 1rem;
-            outline: none;
+        .writing-lines {
+            border-bottom: 1px solid #ccc;
+            height: 1cm;
+            margin: 0.2cm 0;
         }
 
-        .essay-textarea:focus {
-            border-color: var(--accent);
-        }
-
-        .word-counter {
-            text-align: right;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            margin-top: 0.25rem;
-        }
-
-        /* Print styles helper */
-        .no-print {
-            display: block;
-        }
-
-        /* Accordion style for answer keys tab */
-        .key-accordion {
-            margin-bottom: 1.5rem;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .key-acc-header {
-            background-color: var(--bg-secondary);
-            padding: 1.2rem;
-            cursor: pointer;
-            font-weight: 600;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .key-acc-body {
+        .listening-transcript-print {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
             padding: 1.5rem;
-            background-color: var(--bg-primary);
-            display: none;
-            max-height: 600px;
-            overflow-y: auto;
+            margin-top: 1rem;
+            font-size: 10pt;
+            page-break-inside: avoid;
         }
     </style>
 </head>
 <body>
+    <h1>IELTS Academic Mock Exam<br><span style="font-size:14pt; font-weight:normal;">Test Booklet & Answer Keys</span></h1>
+    
+    <div style="margin-bottom: 2cm;">
+        <p><strong>Candidate Name:</strong> _________________________________________________</p>
+        <p><strong>Date:</strong> ________________________</p>
+        <p><strong>Target Band Score:</strong> Band 5 → 7 (Confidence Builder Exam)</p>
+    </div>
 
-    <header class="no-print">
-        <div class="logo">IELTS Academic Practice Portal</div>
-        <button class="theme-toggle" onclick="toggleTheme()">☀️ Light Mode</button>
-    </header>
+    <div class="page-break"></div>
 
-    <div class="container">
-        <!-- Tab Navigation -->
-        <div class="nav-tabs no-print">
-            <button class="tab-btn active" onclick="openTab('listening')">🎧 Listening</button>
-            <button class="tab-btn" onclick="openTab('reading')">📖 Reading</button>
-            <button class="tab-btn" onclick="openTab('writing')">✍️ Writing</button>
-            <button class="tab-btn" onclick="openTab('speaking')">🗣️ Speaking</button>
-            <button class="tab-btn" onclick="openTab('scoring')">📊 Scoring & Progress</button>
-            <button class="tab-btn" onclick="openTab('keys')">🔑 Detailed Answer Keys</button>
-        </div>
-
-        <!-- LISTENING SECTION -->
-        <div id="listening" class="tab-content active">
-            <h1>IELTS Academic Listening Test</h1>
-            <div class="listening-player no-print">
-                <div class="player-left">
-                    <button class="play-btn" onclick="togglePlay(this)">▶</button>
-                    <div>
-                        <strong>Listening Audio Track (Simulated)</strong>
-                        <div style="font-size: 0.85rem; opacity: 0.8;">Read the transcript below if you do not have a partner to read aloud.</div>
-                    </div>
-                </div>
-                <div class="player-track">
-                    <div class="track-bar" onclick="seekTrack(event)">
-                        <div class="track-progress" id="trackProgress"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Listening Test Content Wrapper -->
-            <div id="listening-test-content">
-                <h1>IELTS Academic Listening Test — Practice Exam</h1>
+    <h2>🎧 LISTENING TEST</h2>
+    <h1>IELTS Academic Listening Test — Practice Exam</h1>
 <p><strong>Total Time:</strong> Approximately 30 minutes (+ 10 minutes transfer time)  
 <strong>Total Questions:</strong> 40  
 <strong>Difficulty Level:</strong> Slightly below real exam (confidence builder for Band 5→7)</p>
@@ -516,9 +120,7 @@
 > Stage directions in [square brackets] should NOT be read aloud.  
 > Words in <em>italics</em> indicate natural stress or emphasis.</blockquote>
 <p>---</p>
-    <div class="listening-section-box" style="margin-bottom: 3rem;">
-        <h2>Section 1</h2>
-        <div style="margin-bottom: 1.5rem;"><p>Questions 1–10</p>
+<h2>SECTION 1: Questions 1–10</h2>
 <blockquote class="info-blockquote"><strong>You will hear a phone conversation between a student and a rental agency about finding accommodation near a university.</strong>
 >
 > First, you have 30 seconds to look at Questions 1–10.
@@ -579,14 +181,9 @@
 <ul><li>A. book two viewings</li>
 <li>B. look at other agencies first</li>
 <li>C. call back after checking with her flatmate</li></ul></p>
-<p>---</p></div>
-        
-        <div class="transcript-container no-print">
-            <div class="transcript-header" onclick="toggleTranscript(this)">
-                <span>🔊 Section 1 Audio Transcript (Click to Expand)</span>
-                <span>▼</span>
-            </div>
-            <div class="transcript-body"><p><em>[Phone rings twice]</em></p>
+<p>---</p>
+<h3>SECTION 1 — TRANSCRIPT</h3>
+<p><em>[Phone rings twice]</em></p>
 <p><strong>Agent:</strong> Good morning, Greenfield Lettings. This is Tom speaking. How can I help you?</p>
 <p><strong>Sarah:</strong> Oh, hi. Um, good morning. My name's Sarah, and I'm looking for a flat to rent. I'm going to be starting at Westbrook University in September, so I need somewhere fairly close to campus, if possible.</p>
 <p><strong>Agent:</strong> Right, of course. Let me just pull up our enquiry form, and we'll get some details from you. So, your first name is Sarah — and could I take your surname, please?</p>
@@ -617,13 +214,8 @@
 <p><strong>Sarah:</strong> Bye!</p>
 <p><em>[End of Section 1. You now have 30 seconds to check your answers.]</em></p>
 <p><em>[30-second pause]</em></p>
-<p>---</p></div>
-        </div>
-    </div>
-    
-    <div class="listening-section-box" style="margin-bottom: 3rem;">
-        <h2>Section 2</h2>
-        <div style="margin-bottom: 1.5rem;"><p>Questions 11–20</p>
+<p>---</p>
+<h2>SECTION 2: Questions 11–20</h2>
 <blockquote class="info-blockquote"><strong>You will hear a tour guide giving information about a local museum and its upcoming exhibitions.</strong>
 >
 > First, you have 30 seconds to look at Questions 11–15.
@@ -697,14 +289,9 @@
 <p><strong>18.</strong> Visitors to the wildlife exhibition can use \_\_\_\_\_\_\_\_\_\_\_\_ to hear animal sounds.</p>
 <p><strong>19.</strong> On Saturdays, the museum organises free \_\_\_\_\_\_\_\_\_\_\_\_ for children aged 5 to 12.</p>
 <p><strong>20.</strong> The museum car park is located behind the \_\_\_\_\_\_\_\_\_\_\_\_.</p>
-<p>---</p></div>
-        
-        <div class="transcript-container no-print">
-            <div class="transcript-header" onclick="toggleTranscript(this)">
-                <span>🔊 Section 2 Audio Transcript (Click to Expand)</span>
-                <span>▼</span>
-            </div>
-            <div class="transcript-body"><p><em>[Bright, welcoming tone]</em></p>
+<p>---</p>
+<h3>SECTION 2 — TRANSCRIPT</h3>
+<p><em>[Bright, welcoming tone]</em></p>
 <p><strong>Guide:</strong> Good afternoon, everyone, and welcome to the Riverside Museum! My name's Angela, and I'll be your guide today. Before we start the tour, I'd like to give you a quick overview of the building and tell you about some of the exciting things we have coming up.</p>
 <p>Now, if you look at the plan of the ground floor, you'll see that you came in through the main entrance at the bottom of the building. The gift shop is to your right — you probably noticed that on your way in. Directly to the left of the entrance, in the very first room on the left-hand side, is where you'll find the <em>ticket office</em>. That's room A on your plan.</p>
 <p>Moving further into the building, the next room along on the left — room B — that's our <em>café</em>. We serve tea, coffee, sandwiches, and some lovely homemade cakes, so do pop in during your visit. It's usually quite quiet in the mornings, if you want to avoid the crowds.</p>
@@ -721,13 +308,8 @@
 <p>Right, so if everyone's ready, let's begin our tour! We'll start in the Ancient History Gallery. Follow me, please.</p>
 <p><em>[End of Section 2. You now have 30 seconds to check your answers.]</em></p>
 <p><em>[30-second pause]</em></p>
-<p>---</p></div>
-        </div>
-    </div>
-    
-    <div class="listening-section-box" style="margin-bottom: 3rem;">
-        <h2>Section 3</h2>
-        <div style="margin-bottom: 1.5rem;"><p>Questions 21–30</p>
+<p>---</p>
+<h2>SECTION 3: Questions 21–30</h2>
 <blockquote class="info-blockquote"><strong>You will hear a tutorial discussion between a professor and two students about a group research project on renewable energy in urban areas.</strong>
 >
 > First, you have 30 seconds to look at Questions 21–25.
@@ -833,14 +415,9 @@
 <td>Micro-hydropower</td>
 <td>\_\_\_\_</td>
 </tr>
-</tbody></table>---</div>
-        
-        <div class="transcript-container no-print">
-            <div class="transcript-header" onclick="toggleTranscript(this)">
-                <span>🔊 Section 3 Audio Transcript (Click to Expand)</span>
-                <span>▼</span>
-            </div>
-            <div class="transcript-body"><p><strong>Professor Clarke:</strong> Right, Maya and Jake, thanks for coming to see me. Let's talk about how your research project is going. Just to remind me — can you summarise the focus of your project?</p>
+</tbody></table>---
+<h3>SECTION 3 — TRANSCRIPT</h3>
+<p><strong>Professor Clarke:</strong> Right, Maya and Jake, thanks for coming to see me. Let's talk about how your research project is going. Just to remind me — can you summarise the focus of your project?</p>
 <p><strong>Maya:</strong> Sure. So, essentially, we're looking at how cities can <em>increase</em> their use of renewable energy. We're focusing specifically on urban environments — you know, the challenges and opportunities that come with trying to implement green energy in places where space is limited and demand is high.</p>
 <p><strong>Professor Clarke:</strong> Good. That's a relevant and timely topic. Now, I've had a chance to look at the draft of your literature review, and I have to say, I was quite impressed. The structure is <em>clear and well-organised</em>. You've separated it logically into themes — policy, technology, public attitudes — which makes it easy to follow. Well done on that.</p>
 <p><strong>Jake:</strong> Oh, that's good to hear. We spent quite a long time rearranging it, actually.</p>
@@ -869,13 +446,8 @@
 <p><strong>Maya:</strong> Yes, thank you. That's been really helpful.</p>
 <p><em>[End of Section 3. You now have 30 seconds to check your answers.]</em></p>
 <p><em>[30-second pause]</em></p>
-<p>---</p></div>
-        </div>
-    </div>
-    
-    <div class="listening-section-box" style="margin-bottom: 3rem;">
-        <h2>Section 4</h2>
-        <div style="margin-bottom: 1.5rem;"><p>Questions 31–40</p>
+<p>---</p>
+<h2>SECTION 4: Questions 31–40</h2>
 <blockquote class="info-blockquote"><strong>You will hear a university lecture on the psychology of decision-making and how cognitive biases affect everyday choices.</strong>
 >
 > First, you have 30 seconds to look at Questions 31–35.
@@ -899,14 +471,9 @@
 <p><strong>38.</strong> In the supermarket example, what was placed next to the expensive wine to influence customers?</p>
 <p><strong>39.</strong> What type of professional does the lecturer say is also affected by confirmation bias?</p>
 <p><strong>40.</strong> What does the lecturer suggest students do to reduce the impact of cognitive biases on their own decisions?</p>
-<p>---</p></div>
-        
-        <div class="transcript-container no-print">
-            <div class="transcript-header" onclick="toggleTranscript(this)">
-                <span>🔊 Section 4 Audio Transcript (Click to Expand)</span>
-                <span>▼</span>
-            </div>
-            <div class="transcript-body"><p><em>[Formal, measured academic tone. Pace: moderate and clear.]</em></p>
+<p>---</p>
+<h3>SECTION 4 — TRANSCRIPT</h3>
+<p><em>[Formal, measured academic tone. Pace: moderate and clear.]</em></p>
 <p><strong>Lecturer:</strong> Good morning, everyone. Today's lecture is on a topic that I think you'll find directly relevant to your own lives — the psychology of decision-making, and specifically, how cognitive biases affect the choices we make every day.</p>
 <p>Now, let's start with a simple question: how many decisions do you think you make in a day? You might guess a hundred, maybe two hundred. In fact, research suggests that the average adult makes approximately <em>35,000</em> decisions every single day. That's an enormous number. Most of these are small and automatic — what to eat for breakfast, which route to take to work — but some of them are significant and have lasting consequences.</p>
 <p>Given the sheer volume of decisions we face, it would be impossible for us to carefully analyse every single one. Our brains simply don't have the time or the energy. So what do we do? We take shortcuts. In psychology, these mental shortcuts are called <em>heuristics</em>. Heuristics allow us to make rapid judgements without having to process every piece of available information. And most of the time, they work perfectly well. The main reason people use these shortcuts is to <em>save time</em> — our brains are essentially built for efficiency.</p>
@@ -923,31 +490,312 @@
 <p>Right, that's all for today. Next week, we'll be looking at group decision-making and the phenomenon known as "groupthink." If you have any questions, I'll be here for the next ten minutes. Thank you.</p>
 <p><em>[End of Section 4. You now have 30 seconds to check your answers.]</em></p>
 <p><em>[30-second pause]</em></p>
-<p>---</p></div>
-        </div>
-    </div>
-    
-            </div>
-            
-            <button class="btn no-print" onclick="checkListeningAnswers()">Check Answers</button>
-        </div>
+<p>---</p>
+<h2>End of Listening Test</h2>
+<blockquote class="info-blockquote"><strong>You now have 10 minutes to transfer your answers to the Listening Answer Sheet.</strong>
+>
+> In the real IELTS exam, you write your answers on a separate answer sheet during this time.  
+> For practice purposes, check that all your answers are clearly written.</blockquote>
+<p><strong>Total test time:</strong> approximately 30 minutes + 10 minutes transfer time = <strong>40 minutes</strong></p>
+<p>---</p>
+<h2>ANSWER KEY</h2>
+<h3>Section 1 (Questions 1–10)</h3>
+<table>
+<thead><tr>
+<th>Q</th>
+<th>Answer</th>
+<th>Notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Mitchell</td>
+<td>Spelled out in transcript: M-I-T-C-H-E-L-L</td>
+</tr>
+<tr>
+<td>2</td>
+<td>07700 943 662</td>
+<td>Sarah corrects herself — final digit is 2, not 1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Environmental</td>
+<td>"Environmental Studies"</td>
+</tr>
+<tr>
+<td>4</td>
+<td>library</td>
+<td>"near the library" — specifically the university library</td>
+</tr>
+<tr>
+<td>5</td>
+<td>650</td>
+<td>Six hundred and fifty pounds</td>
+</tr>
+<tr>
+<td>6</td>
+<td>15th / fifteenth (of)</td>
+<td>"the fifteenth of September"</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>B</strong></td>
+<td>Water and internet are included (electricity and gas are extra)</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>B</strong></td>
+<td>"too far" — 20-minute bus ride; she wants to walk</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>B</strong></td>
+<td>The agent says it can be arranged for Saturday morning</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>C</strong></td>
+<td>She decides to call back after checking with her flatmate</td>
+</tr>
+</tbody></table><h3>Section 2 (Questions 11–20)</h3>
+<table>
+<thead><tr>
+<th>Q</th>
+<th>Answer</th>
+<th>Notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>11</td>
+<td><strong>A</strong></td>
+<td>Ticket office — "the very first room on the left-hand side"</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>B</strong></td>
+<td>Café — "the next room along on the left"</td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>C</strong></td>
+<td>Ancient History Gallery — "carrying on up the left-hand side, room C"</td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>D</strong></td>
+<td>Children's Activity Room — "above that, room D"</td>
+</tr>
+<tr>
+<td>15</td>
+<td><strong>G</strong></td>
+<td>Temporary Exhibition Hall — "room G, over on the right side towards the top"</td>
+</tr>
+<tr>
+<td>16</td>
+<td>cotton mill</td>
+<td>"originally constructed as a cotton mill"</td>
+</tr>
+<tr>
+<td>17</td>
+<td>March</td>
+<td>"open on the first of March"</td>
+</tr>
+<tr>
+<td>18</td>
+<td>headphones</td>
+<td>"you can use headphones at various stations"</td>
+</tr>
+<tr>
+<td>19</td>
+<td>workshops</td>
+<td>"free workshops for children"</td>
+</tr>
+<tr>
+<td>20</td>
+<td>courtyard</td>
+<td>"located behind the courtyard"</td>
+</tr>
+</tbody></table><h3>Section 3 (Questions 21–30)</h3>
+<table>
+<thead><tr>
+<th>Q</th>
+<th>Answer</th>
+<th>Notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>21</td>
+<td><strong>B</strong></td>
+<td>How cities can increase their use of renewable energy</td>
+</tr>
+<tr>
+<td>22</td>
+<td><strong>C</strong></td>
+<td>"The structure is clear and well-organised"</td>
+</tr>
+<tr>
+<td>23</td>
+<td><strong>A</strong></td>
+<td>Most residents didn't know about government incentives</td>
+</tr>
+<tr>
+<td>24</td>
+<td><strong>A</strong></td>
+<td>Online survey responses were incomplete</td>
+</tr>
+<tr>
+<td>25</td>
+<td><strong>A</strong></td>
+<td>Recommends conducting interviews with city planners</td>
+</tr>
+<tr>
+<td>26</td>
+<td><strong>A</strong></td>
+<td>Solar panels: can be installed on existing buildings</td>
+</tr>
+<tr>
+<td>27</td>
+<td><strong>E</strong></td>
+<td>Small wind turbines: creates local employment opportunities</td>
+</tr>
+<tr>
+<td>28</td>
+<td><strong>F</strong></td>
+<td>Ground-source heat pumps: requires very little maintenance</td>
+</tr>
+<tr>
+<td>29</td>
+<td><strong>G</strong></td>
+<td>Biomass heating: can be combined with other energy systems</td>
+</tr>
+<tr>
+<td>30</td>
+<td><strong>B</strong></td>
+<td>Micro-hydropower: produces no noise</td>
+</tr>
+</tbody></table><h3>Section 4 (Questions 31–40)</h3>
+<table>
+<thead><tr>
+<th>Q</th>
+<th>Answer</th>
+<th>Notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>31</td>
+<td>heuristics</td>
+<td>"mental shortcuts are called heuristics"</td>
+</tr>
+<tr>
+<td>32</td>
+<td>first</td>
+<td>"rely too heavily on the first piece of information"</td>
+</tr>
+<tr>
+<td>33</td>
+<td>supports</td>
+<td>"evidence that supports their existing beliefs"</td>
+</tr>
+<tr>
+<td>34</td>
+<td>examples</td>
+<td>"how easily examples come to mind"</td>
+</tr>
+<tr>
+<td>35</td>
+<td>pleasure</td>
+<td>"the pleasure of gaining something of equal value"</td>
+</tr>
+<tr>
+<td>36</td>
+<td>35,000</td>
+<td>"approximately 35,000 decisions every single day"</td>
+</tr>
+<tr>
+<td>37</td>
+<td>(to) save time</td>
+<td>"the main reason people use these shortcuts is to save time"</td>
+</tr>
+<tr>
+<td>38</td>
+<td>(a) moderately priced bottle</td>
+<td>"placed next to a moderately priced bottle"</td>
+</tr>
+<tr>
+<td>39</td>
+<td>doctors</td>
+<td>"Research has shown that doctors..."</td>
+</tr>
+<tr>
+<td>40</td>
+<td>question their/your assumptions</td>
+<td>"My suggestion... is to question your assumptions"</td>
+</tr>
+</tbody></table>---
+<h2>Scoring Guide</h2>
+<table>
+<thead><tr>
+<th>Band Score</th>
+<th>Raw Score (out of 40)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Band 9</td>
+<td>39–40</td>
+</tr>
+<tr>
+<td>Band 8.5</td>
+<td>37–38</td>
+</tr>
+<tr>
+<td>Band 8</td>
+<td>35–36</td>
+</tr>
+<tr>
+<td>Band 7.5</td>
+<td>32–34</td>
+</tr>
+<tr>
+<td>Band 7</td>
+<td>30–31</td>
+</tr>
+<tr>
+<td>Band 6.5</td>
+<td>26–29</td>
+</tr>
+<tr>
+<td>Band 6</td>
+<td>23–25</td>
+</tr>
+<tr>
+<td>Band 5.5</td>
+<td>18–22</td>
+</tr>
+<tr>
+<td>Band 5</td>
+<td>16–17</td>
+</tr>
+<tr>
+<td>Band 4.5</td>
+<td>13–15</td>
+</tr>
+</tbody></table>> <strong>Tip for Band 5→7 learners:</strong> Focus on reading the questions carefully <em>before</em> you listen. Underline key words in each question. Pay attention to word limits — if it says "NO MORE THAN TWO WORDS," writing three words will be marked wrong even if the answer is correct. Practice spelling common words accurately.
 
-        <!-- READING SECTION -->
-        <div id="reading" class="tab-content">
-            <h1>IELTS Academic Reading Test</h1>
-            
-            <!-- Passage Tabs -->
-            <div class="nav-tabs no-print" style="margin-bottom: 1rem; border-bottom: none;">
-                <button class="tab-btn active" onclick="openReadingPassage('passage1')">Passage 1: Urban Farming</button>
-                <button class="tab-btn" onclick="openReadingPassage('passage2')">Passage 2: Sleep & Academic Performance</button>
-                <button class="tab-btn" onclick="openReadingPassage('passage3')">Passage 3: Economics of Happiness</button>
-            </div>
+    <div class="page-break"></div>
 
-            <div class="split-layout">
-                <!-- Left Pane: Passages -->
-                <div class="pane-passage">
-                    <div id="passage1" class="passage-text">
-                        <p><em>You should spend about 15 minutes on Questions 1–13, which are based on Reading Passage 1 below.</em></p>
+    <h2>📖 READING TEST</h2>
+    <h1>IELTS Academic Reading Test — Practice Exam</h1>
+<p><strong>Time allowed: 60 minutes</strong>
+<strong>Total questions: 40</strong></p>
+<blockquote class="info-blockquote"><strong>Timing guidance:</strong> You have 60 minutes to complete all three passages. Suggested time allocation:
+> - Passage 1: 15 minutes
+> - Passage 2: 20 minutes
+> - Passage 3: 25 minutes
+>
+> Transfer your answers to the answer sheet within the 60 minutes.</blockquote>
+<p>---</p>
+<h2>READING PASSAGE 1</h2>
+<p><em>You should spend about 15 minutes on Questions 1–13, which are based on Reading Passage 1 below.</em></p>
 <p>---</p>
 <h3>The Rise of Urban Farming</h3>
 <p><strong>A</strong> &emsp; In cities around the world, a quiet revolution is taking place on rooftops, in abandoned warehouses, and on small patches of unused land. Urban farming — the practice of growing food within city boundaries — has expanded rapidly over the past two decades. What was once considered an unusual hobby for a few enthusiastic gardeners has become a serious movement with the potential to reshape how cities feed their populations. According to the United Nations Food and Agriculture Organization, urban and peri-urban agriculture already supplies food to approximately 800 million people worldwide, and this number continues to grow as more cities embrace the concept.</p>
@@ -957,38 +805,7 @@
 <p><strong>E</strong> &emsp; Despite its clear promise, urban farming faces a number of significant challenges. The most obvious is space. In densely populated cities, land is expensive and highly sought after by property developers, businesses, and housing authorities. Convincing city planners to allocate valuable land for food production rather than commercial or residential development requires strong evidence of economic and social returns. Soil quality presents another obstacle: many urban sites are contaminated with heavy metals, industrial chemicals, or construction waste, making the ground unsuitable for growing edible crops without extensive and costly remediation. Furthermore, local regulations and zoning laws in many cities were not designed with agriculture in mind. Farmers may struggle to obtain the necessary permits to keep livestock, install irrigation systems, or sell their produce at local markets.</p>
 <p><strong>F</strong> &emsp; Nevertheless, the momentum behind urban farming shows no sign of slowing. Advances in technology — including hydroponics, aquaponics, and automated growing systems — are making it possible to farm in places that would have been unimaginable just a generation ago. Meanwhile, growing consumer demand for locally produced, organic food is creating new market opportunities for urban growers. Governments, too, are beginning to recognise the strategic importance of local food production, particularly in the wake of supply chain disruptions caused by events such as the COVID-19 pandemic. While urban farming is unlikely to replace conventional agriculture entirely, it is increasingly clear that it will play a vital and expanding role in feeding the cities of the future.</p>
 <p>---</p>
-                    </div>
-                    <div id="passage2" class="passage-text" style="display:none;">
-                        <p><em>You should spend about 20 minutes on Questions 14–26, which are based on Reading Passage 2 below.</em></p>
-<p>---</p>
-<h3>Sleep and Academic Performance: What the Research Shows</h3>
-<p><strong>A</strong> &emsp; It is no secret that university students are among the most sleep-deprived groups in modern society. A combination of academic pressures, social activities, part-time employment, and the constant availability of digital entertainment means that many students regularly sleep far less than the recommended seven to nine hours per night. A large-scale survey conducted by the American College Health Association in 2019 found that over 60 percent of university students described their sleep quality as "poor" or "fairly poor," and more than a quarter reported that sleep difficulties had negatively affected their academic performance within the previous twelve months. These figures are not unique to the United States; similar patterns have been observed in studies from the United Kingdom, Australia, South Korea, and numerous other countries.</p>
-<p><strong>B</strong> &emsp; The relationship between sleep and cognitive function has been extensively studied, and the findings are remarkably consistent. Research published in the journal <em>Sleep</em> by Dr. Matthew Walker and his colleagues at the University of California, Berkeley, demonstrated that students who slept fewer than six hours per night in the week before an examination scored, on average, 10 percent lower than those who maintained a regular sleep schedule of seven to eight hours. Walker's research highlighted the critical role of sleep in memory consolidation — the process by which the brain transfers information from short-term to long-term memory. During deep sleep, the hippocampus replays the day's learning experiences, strengthening neural connections and making information easier to retrieve later. When sleep is curtailed, this process is interrupted, and students may find that material they studied thoroughly the night before feels unfamiliar during the exam.</p>
-<p><strong>C</strong> &emsp; Interestingly, not all sleep is equal when it comes to learning. Research has shown that different stages of sleep serve different cognitive functions. Rapid Eye Movement (REM) sleep, which occurs primarily in the later hours of a full night's sleep, is particularly important for creative problem-solving and the integration of complex ideas. Slow-wave sleep, which dominates the first half of the night, is more closely associated with the retention of factual information and vocabulary. This has practical implications for students: those who go to bed very late and wake up early may get adequate slow-wave sleep but miss much of their REM sleep, potentially impairing their ability to think critically and make connections between different concepts. Dr. Sara Mednick, a sleep researcher at the University of California, Irvine, has noted that understanding these sleep stages could help students make more informed decisions about their study schedules.</p>
-<p><strong>D</strong> &emsp; The topic of napping has generated considerable interest among researchers in recent years. A study conducted by Mednick and her team found that a 60- to 90-minute afternoon nap containing both slow-wave and REM sleep could improve performance on learning tasks by as much as 20 percent. Shorter naps of 15 to 20 minutes, while less restorative, were also found to boost alertness and reduce errors on attention-based tasks. However, Mednick cautioned that napping is not a substitute for a full night's sleep. Students who rely on naps to compensate for chronic sleep deprivation still show lower overall cognitive performance compared to those who sleep adequately at night. Furthermore, napping too late in the day — after 3:00 p.m. — can interfere with nighttime sleep, creating a cycle of poor sleep habits that is difficult to break.</p>
-<p><strong>E</strong> &emsp; One factor that makes sleep management particularly challenging for students is the natural shift in circadian rhythms that occurs during adolescence and young adulthood. Research by Dr. Mary Carskadon at Brown University has demonstrated that during this period, the body's internal clock shifts later, meaning that young people naturally feel sleepy later at night and find it difficult to wake up early in the morning. This biological tendency directly conflicts with traditional university timetables, which often schedule lectures and examinations in the early morning. Carskadon has argued that universities should consider offering more flexible scheduling options to accommodate students' natural sleep patterns, a recommendation that has been adopted by a small but growing number of institutions worldwide.</p>
-<p><strong>F</strong> &emsp; Given the strength of the evidence, sleep scientists have put forward several practical recommendations for students seeking to improve both their sleep and their academic results. First, they advise maintaining a consistent sleep schedule — going to bed and waking up at roughly the same time each day, including weekends. Second, they recommend limiting exposure to screens and blue light in the hour before bedtime, as research has shown that the light emitted by phones and laptops suppresses the production of melatonin, a hormone that signals to the body that it is time to sleep. Third, they suggest that students avoid caffeine after mid-afternoon, as its stimulating effects can last for six hours or more. Finally, they encourage students to view sleep not as a luxury that can be sacrificed during busy periods, but as a fundamental component of academic success — one that is just as important as attending lectures or completing assignments.</p>
-<p>---</p>
-                    </div>
-                    <div id="passage3" class="passage-text" style="display:none;">
-                        <p><em>You should spend about 25 minutes on Questions 27–40, which are based on Reading Passage 3 below.</em></p>
-<p>---</p>
-<h3>The Economics of Happiness: Can Money Buy Well-Being?</h3>
-<p><strong>A</strong> &emsp; Few questions have occupied economists, philosophers, and psychologists as persistently as the relationship between wealth and happiness. Common sense suggests a straightforward connection: more money means greater comfort, security, and opportunity, all of which should logically lead to higher levels of personal satisfaction. Yet the empirical evidence tells a far more complicated story — one that challenges deeply held assumptions about the purpose of economic growth and the nature of human contentment.</p>
-<p><strong>B</strong> &emsp; The modern academic debate on this subject was largely ignited by the economist Richard Easterlin, who in 1974 published a landmark paper examining the relationship between national income and reported happiness across countries and over time. Easterlin observed a puzzling pattern: while wealthier individuals within a given country tended to report higher life satisfaction than poorer individuals, increases in a country's average income over several decades did not produce corresponding increases in average happiness. This finding, which became known as the Easterlin Paradox, suggested that beyond a certain threshold of income — enough to meet basic needs such as food, shelter, healthcare, and education — additional wealth contributed surprisingly little to overall well-being. Easterlin proposed that this paradox could be explained by the fact that people evaluate their economic situation not in absolute terms, but relative to the people around them.</p>
-<p><strong>C</strong> &emsp; The concept of relative wealth has been explored extensively by subsequent researchers. Professor Andrew Clark of the Paris School of Economics conducted a series of studies demonstrating that an individual's satisfaction with their income depends heavily on how that income compares to the earnings of their peers, colleagues, and neighbours. In one well-known experiment, participants were asked to choose between two scenarios: earning $50,000 per year while their neighbours earned $25,000, or earning $100,000 per year while their neighbours earned $250,000. A significant majority chose the first option, despite it representing a substantially lower absolute income. Clark argued that this preference reveals a fundamental feature of human psychology: our sense of financial well-being is shaped more by social comparison than by the actual amount of money we possess. This finding has been replicated across cultures, though its strength varies — some researchers, including Dr. Shigehiro Oishi of the University of Virginia, have found that the effect of social comparison on happiness is somewhat weaker in collectivist societies than in individualist ones.</p>
-<p><strong>D</strong> &emsp; Another key concept in understanding the relationship between money and happiness is hedonic adaptation — the well-documented tendency for people to return to a baseline level of happiness after experiencing significant positive or negative life changes. Psychologist Dr. Daniel Kahneman, a Nobel laureate in Economics, studied this phenomenon extensively and found that events people expect will dramatically improve their happiness — such as receiving a large salary increase or purchasing a new home — typically produce only a temporary boost in mood. Within months, people adjust to their new circumstances and their satisfaction returns to approximately where it was before. Kahneman described this process as a "hedonic treadmill," suggesting that people are continually striving for more without experiencing lasting gains in happiness. His research, conducted with Dr. Angus Deaton of Princeton University, also identified a specific income threshold in the United States: emotional well-being — the day-to-day experience of positive and negative feelings — stopped increasing beyond an annual household income of approximately $75,000 (in 2010 dollars), even though people's broader evaluation of their lives continued to rise with income beyond that point.</p>
-<p><strong>E</strong> &emsp; Not all researchers agree with the conclusions drawn by Easterlin and Kahneman. In 2013, economists Betsey Stevenson and Justin Wolfers of the University of Michigan published an influential analysis using data from 155 countries, arguing that the Easterlin Paradox does not hold when more recent and comprehensive data is considered. Stevenson and Wolfers found a clear, positive, and roughly logarithmic relationship between income and life satisfaction at every level of income, both within and across countries. They contended that while the marginal gain in happiness decreases as income rises — meaning that going from $10,000 to $20,000 brings more happiness than going from $100,000 to $110,000 — there is no clear point at which more money ceases to matter entirely. Their work was supported by a 2021 study by Dr. Matthew Killingsworth of the University of Pennsylvania, who used a smartphone-based experience sampling method to collect over one million real-time reports of well-being and found that happiness continued to rise with income well beyond the $75,000 threshold identified by Kahneman and Deaton.</p>
-<p><strong>F</strong> &emsp; These academic debates have significant implications for public policy. If happiness does not increase indefinitely with national income, as Easterlin originally suggested, then governments might be better served by focusing on reducing inequality, strengthening social services, and investing in areas such as mental health, community development, and work-life balance rather than pursuing economic growth as an end in itself. The small Himalayan kingdom of Bhutan famously adopted this philosophy when it introduced the concept of Gross National Happiness (GNH) as an alternative to Gross Domestic Product (GDP), measuring national progress through indicators such as psychological well-being, health, education, cultural resilience, and environmental sustainability. Several other nations, including New Zealand and Scotland, have since adopted well-being frameworks that similarly aim to look beyond purely economic measures of success.</p>
-<p><strong>G</strong> &emsp; On the other hand, if Stevenson and Wolfers are correct that income continues to improve life satisfaction at all levels, then economic growth remains a legitimate and important policy objective — though it should ideally be pursued alongside measures that promote equitable distribution. What both sides of the debate tend to agree on, however, is that the relationship between money and happiness is far from simple. Factors such as personal relationships, meaningful work, physical health, a sense of autonomy, and connection to community consistently emerge as powerful predictors of well-being, often rivalling or surpassing the influence of income. The challenge for policymakers and individuals alike is to recognise that while financial security is undoubtedly important, it represents only one piece of a much larger and more complex puzzle.</p>
-<p>---</p>
-                    </div>
-                </div>
-
-                <!-- Right Pane: Questions -->
-                <div class="pane-questions">
-                    <div id="passage1-qs" class="passage-questions">
-                        <h3>Questions 1–5</h3>
+<h3>Questions 1–5</h3>
 <p><em>Do the following statements agree with the information given in Reading Passage 1?</em></p>
 <p><em>Write:</em></p>
 <table>
@@ -1090,9 +907,18 @@
 </tbody></table>Urban farming has grown significantly as cities look for ways to provide <strong>( 10 )</strong> ______ food for their residents. In Singapore, the government has promoted <strong>( 11 )</strong> ______ farming, in which crops are grown in <strong>( 12 )</strong> ______ layers inside controlled environments. However, urban farming is not without difficulties. In many cities, the soil is <strong>( 13 )</strong> ______ with harmful substances, which makes it unsuitable for growing food.
 <p>---
 ---</p>
-                    </div>
-                    <div id="passage2-qs" class="passage-questions" style="display:none;">
-                        <h3>Questions 14–18</h3>
+<h2>READING PASSAGE 2</h2>
+<p><em>You should spend about 20 minutes on Questions 14–26, which are based on Reading Passage 2 below.</em></p>
+<p>---</p>
+<h3>Sleep and Academic Performance: What the Research Shows</h3>
+<p><strong>A</strong> &emsp; It is no secret that university students are among the most sleep-deprived groups in modern society. A combination of academic pressures, social activities, part-time employment, and the constant availability of digital entertainment means that many students regularly sleep far less than the recommended seven to nine hours per night. A large-scale survey conducted by the American College Health Association in 2019 found that over 60 percent of university students described their sleep quality as "poor" or "fairly poor," and more than a quarter reported that sleep difficulties had negatively affected their academic performance within the previous twelve months. These figures are not unique to the United States; similar patterns have been observed in studies from the United Kingdom, Australia, South Korea, and numerous other countries.</p>
+<p><strong>B</strong> &emsp; The relationship between sleep and cognitive function has been extensively studied, and the findings are remarkably consistent. Research published in the journal <em>Sleep</em> by Dr. Matthew Walker and his colleagues at the University of California, Berkeley, demonstrated that students who slept fewer than six hours per night in the week before an examination scored, on average, 10 percent lower than those who maintained a regular sleep schedule of seven to eight hours. Walker's research highlighted the critical role of sleep in memory consolidation — the process by which the brain transfers information from short-term to long-term memory. During deep sleep, the hippocampus replays the day's learning experiences, strengthening neural connections and making information easier to retrieve later. When sleep is curtailed, this process is interrupted, and students may find that material they studied thoroughly the night before feels unfamiliar during the exam.</p>
+<p><strong>C</strong> &emsp; Interestingly, not all sleep is equal when it comes to learning. Research has shown that different stages of sleep serve different cognitive functions. Rapid Eye Movement (REM) sleep, which occurs primarily in the later hours of a full night's sleep, is particularly important for creative problem-solving and the integration of complex ideas. Slow-wave sleep, which dominates the first half of the night, is more closely associated with the retention of factual information and vocabulary. This has practical implications for students: those who go to bed very late and wake up early may get adequate slow-wave sleep but miss much of their REM sleep, potentially impairing their ability to think critically and make connections between different concepts. Dr. Sara Mednick, a sleep researcher at the University of California, Irvine, has noted that understanding these sleep stages could help students make more informed decisions about their study schedules.</p>
+<p><strong>D</strong> &emsp; The topic of napping has generated considerable interest among researchers in recent years. A study conducted by Mednick and her team found that a 60- to 90-minute afternoon nap containing both slow-wave and REM sleep could improve performance on learning tasks by as much as 20 percent. Shorter naps of 15 to 20 minutes, while less restorative, were also found to boost alertness and reduce errors on attention-based tasks. However, Mednick cautioned that napping is not a substitute for a full night's sleep. Students who rely on naps to compensate for chronic sleep deprivation still show lower overall cognitive performance compared to those who sleep adequately at night. Furthermore, napping too late in the day — after 3:00 p.m. — can interfere with nighttime sleep, creating a cycle of poor sleep habits that is difficult to break.</p>
+<p><strong>E</strong> &emsp; One factor that makes sleep management particularly challenging for students is the natural shift in circadian rhythms that occurs during adolescence and young adulthood. Research by Dr. Mary Carskadon at Brown University has demonstrated that during this period, the body's internal clock shifts later, meaning that young people naturally feel sleepy later at night and find it difficult to wake up early in the morning. This biological tendency directly conflicts with traditional university timetables, which often schedule lectures and examinations in the early morning. Carskadon has argued that universities should consider offering more flexible scheduling options to accommodate students' natural sleep patterns, a recommendation that has been adopted by a small but growing number of institutions worldwide.</p>
+<p><strong>F</strong> &emsp; Given the strength of the evidence, sleep scientists have put forward several practical recommendations for students seeking to improve both their sleep and their academic results. First, they advise maintaining a consistent sleep schedule — going to bed and waking up at roughly the same time each day, including weekends. Second, they recommend limiting exposure to screens and blue light in the hour before bedtime, as research has shown that the light emitted by phones and laptops suppresses the production of melatonin, a hormone that signals to the body that it is time to sleep. Third, they suggest that students avoid caffeine after mid-afternoon, as its stimulating effects can last for six hours or more. Finally, they encourage students to view sleep not as a luxury that can be sacrificed during busy periods, but as a fundamental component of academic success — one that is just as important as attending lectures or completing assignments.</p>
+<p>---</p>
+<h3>Questions 14–18</h3>
 <p><em>Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information?</em></p>
 <p><em>Write the correct letter, A–F, next to Questions 14–18.</em></p>
 <p><em>NB: You may use any letter more than once.</em></p>
@@ -1152,9 +978,19 @@
 <p><strong>26.</strong> &emsp; Students should regard sleep as being equally important to other aspects of their academic life.</p>
 <p>---
 ---</p>
-                    </div>
-                    <div id="passage3-qs" class="passage-questions" style="display:none;">
-                        <h3>Questions 27–31</h3>
+<h2>READING PASSAGE 3</h2>
+<p><em>You should spend about 25 minutes on Questions 27–40, which are based on Reading Passage 3 below.</em></p>
+<p>---</p>
+<h3>The Economics of Happiness: Can Money Buy Well-Being?</h3>
+<p><strong>A</strong> &emsp; Few questions have occupied economists, philosophers, and psychologists as persistently as the relationship between wealth and happiness. Common sense suggests a straightforward connection: more money means greater comfort, security, and opportunity, all of which should logically lead to higher levels of personal satisfaction. Yet the empirical evidence tells a far more complicated story — one that challenges deeply held assumptions about the purpose of economic growth and the nature of human contentment.</p>
+<p><strong>B</strong> &emsp; The modern academic debate on this subject was largely ignited by the economist Richard Easterlin, who in 1974 published a landmark paper examining the relationship between national income and reported happiness across countries and over time. Easterlin observed a puzzling pattern: while wealthier individuals within a given country tended to report higher life satisfaction than poorer individuals, increases in a country's average income over several decades did not produce corresponding increases in average happiness. This finding, which became known as the Easterlin Paradox, suggested that beyond a certain threshold of income — enough to meet basic needs such as food, shelter, healthcare, and education — additional wealth contributed surprisingly little to overall well-being. Easterlin proposed that this paradox could be explained by the fact that people evaluate their economic situation not in absolute terms, but relative to the people around them.</p>
+<p><strong>C</strong> &emsp; The concept of relative wealth has been explored extensively by subsequent researchers. Professor Andrew Clark of the Paris School of Economics conducted a series of studies demonstrating that an individual's satisfaction with their income depends heavily on how that income compares to the earnings of their peers, colleagues, and neighbours. In one well-known experiment, participants were asked to choose between two scenarios: earning $50,000 per year while their neighbours earned $25,000, or earning $100,000 per year while their neighbours earned $250,000. A significant majority chose the first option, despite it representing a substantially lower absolute income. Clark argued that this preference reveals a fundamental feature of human psychology: our sense of financial well-being is shaped more by social comparison than by the actual amount of money we possess. This finding has been replicated across cultures, though its strength varies — some researchers, including Dr. Shigehiro Oishi of the University of Virginia, have found that the effect of social comparison on happiness is somewhat weaker in collectivist societies than in individualist ones.</p>
+<p><strong>D</strong> &emsp; Another key concept in understanding the relationship between money and happiness is hedonic adaptation — the well-documented tendency for people to return to a baseline level of happiness after experiencing significant positive or negative life changes. Psychologist Dr. Daniel Kahneman, a Nobel laureate in Economics, studied this phenomenon extensively and found that events people expect will dramatically improve their happiness — such as receiving a large salary increase or purchasing a new home — typically produce only a temporary boost in mood. Within months, people adjust to their new circumstances and their satisfaction returns to approximately where it was before. Kahneman described this process as a "hedonic treadmill," suggesting that people are continually striving for more without experiencing lasting gains in happiness. His research, conducted with Dr. Angus Deaton of Princeton University, also identified a specific income threshold in the United States: emotional well-being — the day-to-day experience of positive and negative feelings — stopped increasing beyond an annual household income of approximately $75,000 (in 2010 dollars), even though people's broader evaluation of their lives continued to rise with income beyond that point.</p>
+<p><strong>E</strong> &emsp; Not all researchers agree with the conclusions drawn by Easterlin and Kahneman. In 2013, economists Betsey Stevenson and Justin Wolfers of the University of Michigan published an influential analysis using data from 155 countries, arguing that the Easterlin Paradox does not hold when more recent and comprehensive data is considered. Stevenson and Wolfers found a clear, positive, and roughly logarithmic relationship between income and life satisfaction at every level of income, both within and across countries. They contended that while the marginal gain in happiness decreases as income rises — meaning that going from $10,000 to $20,000 brings more happiness than going from $100,000 to $110,000 — there is no clear point at which more money ceases to matter entirely. Their work was supported by a 2021 study by Dr. Matthew Killingsworth of the University of Pennsylvania, who used a smartphone-based experience sampling method to collect over one million real-time reports of well-being and found that happiness continued to rise with income well beyond the $75,000 threshold identified by Kahneman and Deaton.</p>
+<p><strong>F</strong> &emsp; These academic debates have significant implications for public policy. If happiness does not increase indefinitely with national income, as Easterlin originally suggested, then governments might be better served by focusing on reducing inequality, strengthening social services, and investing in areas such as mental health, community development, and work-life balance rather than pursuing economic growth as an end in itself. The small Himalayan kingdom of Bhutan famously adopted this philosophy when it introduced the concept of Gross National Happiness (GNH) as an alternative to Gross Domestic Product (GDP), measuring national progress through indicators such as psychological well-being, health, education, cultural resilience, and environmental sustainability. Several other nations, including New Zealand and Scotland, have since adopted well-being frameworks that similarly aim to look beyond purely economic measures of success.</p>
+<p><strong>G</strong> &emsp; On the other hand, if Stevenson and Wolfers are correct that income continues to improve life satisfaction at all levels, then economic growth remains a legitimate and important policy objective — though it should ideally be pursued alongside measures that promote equitable distribution. What both sides of the debate tend to agree on, however, is that the relationship between money and happiness is far from simple. Factors such as personal relationships, meaningful work, physical health, a sense of autonomy, and connection to community consistently emerge as powerful predictors of well-being, often rivalling or surpassing the influence of income. The challenge for policymakers and individuals alike is to recognise that while financial security is undoubtedly important, it represents only one piece of a much larger and more complex puzzle.</p>
+<p>---</p>
+<h3>Questions 27–31</h3>
 <p><em>Complete each sentence with the correct ending, using NO MORE THAN THREE WORDS from the passage for each answer.</em></p>
 <p><strong>27.</strong> &emsp; Easterlin's 1974 paper examined the link between national income and reported happiness across countries and over ____________.</p>
 <p><strong>28.</strong> &emsp; According to Easterlin, people assess their financial position relative to ____________ rather than in absolute terms.</p>
@@ -1481,16 +1317,11 @@
 <td>8.5–9.0</td>
 </tr>
 </tbody></table>> <strong>Note:</strong> This is an approximate guide based on typical IELTS Academic Reading band descriptors. Actual scores may vary depending on exam difficulty and the official conversion table used by the test centre.
-                    </div>
-                    <button class="btn no-print" onclick="checkReadingAnswers()">Check Answers</button>
-                </div>
-            </div>
-        </div>
 
-        <!-- WRITING SECTION -->
-        <div id="writing" class="tab-content">
-            <h1>IELTS Academic Writing Test</h1>
-            <h1>IELTS Academic Mock Exam — Writing & Speaking Tests</h1>
+    <div class="page-break"></div>
+
+    <h2>✍️ WRITING TEST</h2>
+    <h1>IELTS Academic Mock Exam — Writing & Speaking Tests</h1>
 <p><strong>Difficulty Level:</strong> Slightly below real exam level (confidence builder)  
 <strong>Target Band:</strong> 5 → 7  
 <strong>Format:</strong> Timed Exam</p>
@@ -1600,12 +1431,11 @@
 <p>___</p>
 <p>---</p>
 <p>---</p>
-        </div>
 
-        <!-- SPEAKING SECTION -->
-        <div id="speaking" class="tab-content">
-            <h1>IELTS Academic Speaking Test</h1>
-            <p><strong>Total Time: 11–14 minutes</strong></p>
+    <div class="page-break"></div>
+
+    <h2>🗣️ SPEAKING TEST</h2>
+    <p><strong>Total Time: 11–14 minutes</strong></p>
 <div class="alert-box alert-note"<blockquote class="info-blockquote"><strong>NOTE:</strong> The Speaking test is conducted as a face-to-face interview with one examiner. It is recorded. Speak naturally, clearly, and at a steady pace. You are assessed on <strong>Fluency & Coherence</strong>, <strong>Lexical Resource</strong>, <strong>Grammatical Range & Accuracy</strong>, and <strong>Pronunciation</strong>.</div></blockquote>
 <p>---</p>
 <h2>Part 1: Introduction and Interview</h2>
@@ -1667,41 +1497,411 @@
 <p>---</p>
 <p>---</p>
 <p>---</p>
-        </div>
 
-        <!-- SCORING SECTION -->
-        <div id="scoring" class="tab-content">
-            <h1>📊 Score Calculation & Improvement Plans</h1>
-            <p>Use the inputs below to calculate your Overall Band Score. This tool automatically rounds to the nearest 0.5 band score, matching the official IELTS rules.</p>
-            
-            <div class="calculator-card">
-                <h3>Overall Band Calculator</h3>
-                <br>
-                <div class="calc-row">
-                    <label>Listening Score (0-40 correct answers):</label>
-                    <input type="number" id="calc-lis-raw" class="calc-input" min="0" max="40" value="20" oninput="calculateBands()">
-                </div>
-                <div class="calc-row">
-                    <label>Reading Score (0-40 correct answers):</label>
-                    <input type="number" id="calc-read-raw" class="calc-input" min="0" max="40" value="20" oninput="calculateBands()">
-                </div>
-                <div class="calc-row">
-                    <label>Writing Band Score (Estimated 1.0 - 9.0):</label>
-                    <input type="number" id="calc-write" class="calc-input" min="1" max="9" step="0.5" value="5.5" oninput="calculateBands()">
-                </div>
-                <div class="calc-row">
-                    <label>Speaking Band Score (Estimated 1.0 - 9.0):</label>
-                    <input type="number" id="calc-speak" class="calc-input" min="1" max="9" step="0.5" value="5.5" oninput="calculateBands()">
-                </div>
+    <div class="page-break"></div>
 
-                <div class="overall-score-display">
-                    <div>Your Estimated Overall Band Score:</div>
-                    <div class="overall-band" id="overallBand">5.5</div>
-                    <div id="bandDescription" style="margin-top: 1rem; font-weight: 500;">Modest User</div>
-                </div>
-            </div>
-
-            <h3>Listening Band Score Conversion</h3>
+    <h2>🔑 ANSWER KEYS & SCORE CONVERSION</h2>
+    <h2>Correct Answer Keys</h2>
+<h3>Listening Test Answers</h3>
+<table>
+<thead><tr>
+<th>Q</th>
+<th>Answer</th>
+<th>Notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Mitchell</td>
+<td>Spelled out in transcript: M-I-T-C-H-E-L-L</td>
+</tr>
+<tr>
+<td>2</td>
+<td>07700 943 662</td>
+<td>Sarah corrects herself — final digit is 2, not 1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Environmental</td>
+<td>"Environmental Studies"</td>
+</tr>
+<tr>
+<td>4</td>
+<td>library</td>
+<td>"near the library" — specifically the university library</td>
+</tr>
+<tr>
+<td>5</td>
+<td>650</td>
+<td>Six hundred and fifty pounds</td>
+</tr>
+<tr>
+<td>6</td>
+<td>15th / fifteenth (of)</td>
+<td>"the fifteenth of September"</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>B</strong></td>
+<td>Water and internet are included (electricity and gas are extra)</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>B</strong></td>
+<td>"too far" — 20-minute bus ride; she wants to walk</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>B</strong></td>
+<td>The agent says it can be arranged for Saturday morning</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>C</strong></td>
+<td>She decides to call back after checking with her flatmate</td>
+</tr>
+<tr>
+<td>Q</td>
+<td>Answer</td>
+<td>Notes</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>A</strong></td>
+<td>Ticket office — "the very first room on the left-hand side"</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>B</strong></td>
+<td>Café — "the next room along on the left"</td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>C</strong></td>
+<td>Ancient History Gallery — "carrying on up the left-hand side, room C"</td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>D</strong></td>
+<td>Children's Activity Room — "above that, room D"</td>
+</tr>
+<tr>
+<td>15</td>
+<td><strong>G</strong></td>
+<td>Temporary Exhibition Hall — "room G, over on the right side towards the top"</td>
+</tr>
+<tr>
+<td>16</td>
+<td>cotton mill</td>
+<td>"originally constructed as a cotton mill"</td>
+</tr>
+<tr>
+<td>17</td>
+<td>March</td>
+<td>"open on the first of March"</td>
+</tr>
+<tr>
+<td>18</td>
+<td>headphones</td>
+<td>"you can use headphones at various stations"</td>
+</tr>
+<tr>
+<td>19</td>
+<td>workshops</td>
+<td>"free workshops for children"</td>
+</tr>
+<tr>
+<td>20</td>
+<td>courtyard</td>
+<td>"located behind the courtyard"</td>
+</tr>
+<tr>
+<td>Q</td>
+<td>Answer</td>
+<td>Notes</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>21</td>
+<td><strong>B</strong></td>
+<td>How cities can increase their use of renewable energy</td>
+</tr>
+<tr>
+<td>22</td>
+<td><strong>C</strong></td>
+<td>"The structure is clear and well-organised"</td>
+</tr>
+<tr>
+<td>23</td>
+<td><strong>A</strong></td>
+<td>Most residents didn't know about government incentives</td>
+</tr>
+<tr>
+<td>24</td>
+<td><strong>A</strong></td>
+<td>Online survey responses were incomplete</td>
+</tr>
+<tr>
+<td>25</td>
+<td><strong>A</strong></td>
+<td>Recommends conducting interviews with city planners</td>
+</tr>
+<tr>
+<td>26</td>
+<td><strong>A</strong></td>
+<td>Solar panels: can be installed on existing buildings</td>
+</tr>
+<tr>
+<td>27</td>
+<td><strong>E</strong></td>
+<td>Small wind turbines: creates local employment opportunities</td>
+</tr>
+<tr>
+<td>28</td>
+<td><strong>F</strong></td>
+<td>Ground-source heat pumps: requires very little maintenance</td>
+</tr>
+<tr>
+<td>29</td>
+<td><strong>G</strong></td>
+<td>Biomass heating: can be combined with other energy systems</td>
+</tr>
+<tr>
+<td>30</td>
+<td><strong>B</strong></td>
+<td>Micro-hydropower: produces no noise</td>
+</tr>
+<tr>
+<td>Q</td>
+<td>Answer</td>
+<td>Notes</td>
+</tr>
+</tbody></table>|
+<h3>Reading Test Answers</h3>
+<table>
+<thead><tr>
+<th>Question</th>
+<th>Answer</th>
+<th>Explanation</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>TRUE</td>
+<td>Paragraph A states "approximately 800 million people worldwide."</td>
+</tr>
+<tr>
+<td>2</td>
+<td>FALSE</td>
+<td>Paragraph B states "nearly 70 percent," not more than 80 percent.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>NOT GIVEN</td>
+<td>Government funding for the Michigan Urban Farming Initiative is not mentioned.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>TRUE</td>
+<td>Paragraph D states "imports over 90 percent of its food."</td>
+</tr>
+<tr>
+<td>5</td>
+<td>FALSE</td>
+<td>Paragraph D states the systems "use minimal water."</td>
+</tr>
+<tr>
+<td>6</td>
+<td>viii</td>
+<td>Paragraph B discusses why cities urgently need new approaches to food supply (population growth, supply chain issues).</td>
+</tr>
+<tr>
+<td>7</td>
+<td>v</td>
+<td>Paragraph C describes how urban farming rebuilds communities in Detroit and London.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>ii</td>
+<td>Paragraph D focuses on Singapore's use of technology (vertical farming) to grow food locally.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>iii</td>
+<td>Paragraph E discusses challenges: space, soil contamination, regulations.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>affordable</td>
+<td>Paragraph B mentions providing "fresh, affordable food."</td>
+</tr>
+<tr>
+<td>11</td>
+<td>vertical</td>
+<td>Paragraph D describes "vertical farming."</td>
+</tr>
+<tr>
+<td>12</td>
+<td>stacked</td>
+<td>Paragraph D states "crops are grown in stacked layers."</td>
+</tr>
+<tr>
+<td>13</td>
+<td>contaminated</td>
+<td>Paragraph E states "many urban sites are contaminated with heavy metals."</td>
+</tr>
+</tbody></table>---
+<table>
+<thead><tr>
+<th>Question</th>
+<th>Answer</th>
+<th>Explanation</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>14</td>
+<td>B</td>
+<td>Paragraph B mentions the hippocampus replaying learning experiences during deep sleep.</td>
+</tr>
+<tr>
+<td>15</td>
+<td>D</td>
+<td>Paragraph D states shorter naps "reduce errors on attention-based tasks."</td>
+</tr>
+<tr>
+<td>16</td>
+<td>E</td>
+<td>Paragraph E explains the circadian rhythm shift in young people.</td>
+</tr>
+<tr>
+<td>17</td>
+<td>A</td>
+<td>Paragraph A provides the American College Health Association survey statistics.</td>
+</tr>
+<tr>
+<td>18</td>
+<td>E</td>
+<td>Paragraph E mentions Carskadon's recommendation for "more flexible scheduling options."</td>
+</tr>
+<tr>
+<td>19</td>
+<td>B</td>
+<td>Paragraph B: students "scored, on average, 10 percent lower."</td>
+</tr>
+<tr>
+<td>20</td>
+<td>C</td>
+<td>Paragraph C: REM sleep is "particularly important for creative problem-solving and the integration of complex ideas."</td>
+</tr>
+<tr>
+<td>21</td>
+<td>B</td>
+<td>Paragraph D: a nap "could improve performance on learning tasks by as much as 20 percent."</td>
+</tr>
+<tr>
+<td>22</td>
+<td>C</td>
+<td>Paragraph E: Carskadon recommended "more flexible scheduling options."</td>
+</tr>
+<tr>
+<td>23</td>
+<td>NO</td>
+<td>Paragraph D: Mednick "cautioned that napping is not a substitute for a full night's sleep."</td>
+</tr>
+<tr>
+<td>24</td>
+<td>NO</td>
+<td>Paragraph A: "similar patterns have been observed in studies from the United Kingdom, Australia, South Korea, and numerous other countries."</td>
+</tr>
+<tr>
+<td>25</td>
+<td>NO</td>
+<td>Paragraph F: advises students to "avoid caffeine after mid-afternoon" because "its stimulating effects can last for six hours or more."</td>
+</tr>
+<tr>
+<td>26</td>
+<td>YES</td>
+<td>Paragraph F: students should view sleep as "just as important as attending lectures or completing assignments."</td>
+</tr>
+</tbody></table>---
+<table>
+<thead><tr>
+<th>Question</th>
+<th>Answer</th>
+<th>Explanation</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>27</td>
+<td>time</td>
+<td>Paragraph B: "across countries and over time."</td>
+</tr>
+<tr>
+<td>28</td>
+<td>the people around them</td>
+<td>Paragraph B: "relative to the people around them."</td>
+</tr>
+<tr>
+<td>29</td>
+<td>hedonic treadmill</td>
+<td>Paragraph D: Kahneman described this as a "hedonic treadmill."</td>
+</tr>
+<tr>
+<td>30</td>
+<td>logarithmic</td>
+<td>Paragraph E: "roughly logarithmic relationship."</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Gross National Happiness</td>
+<td>Paragraph F: "Gross National Happiness (GNH)."</td>
+</tr>
+<tr>
+<td>32</td>
+<td>B</td>
+<td>Paragraph C: Andrew Clark's experiment with income comparison scenarios.</td>
+</tr>
+<tr>
+<td>33</td>
+<td>A</td>
+<td>Paragraph B: Easterlin's paradox about national income and happiness.</td>
+</tr>
+<tr>
+<td>34</td>
+<td>C</td>
+<td>Paragraph D: Kahneman and Deaton identified the $75,000 threshold.</td>
+</tr>
+<tr>
+<td>35</td>
+<td>E</td>
+<td>Paragraph E: Killingsworth used "a smartphone-based experience sampling method."</td>
+</tr>
+<tr>
+<td>36</td>
+<td>D</td>
+<td>Paragraph E: Stevenson and Wolfers analysed "data from 155 countries."</td>
+</tr>
+<tr>
+<td>37–38</td>
+<td>B, D</td>
+<td>Paragraph G: "meaningful work" and "physical health" are listed as predictors of well-being.</td>
+</tr>
+<tr>
+<td>39–40</td>
+<td>B, D</td>
+<td>Paragraph F: "reducing inequality" and "investing in areas such as mental health."</td>
+</tr>
+</tbody></table>---
+<h3>Listening Band Score Conversion</h3>
 <table>
 <thead><tr>
 <th>Raw Score (out of 40)</th>
@@ -2147,662 +2347,5 @@
 <p>---</p>
 <p><em>End of Answer Keys & Score Conversion Guide</em>
 <em>Mock Exam Series — Academic Module</em></p>
-        </div>
-
-        <!-- ANSWER KEYS TAB -->
-        <div id="keys" class="tab-content">
-            <h1>🔑 Correct Answer Keys & Explanations</h1>
-            <p style="margin-bottom: 2rem;">Click on the sections below to reveal the correct answers, alternatives, and detailed explanations of why they are correct.</p>
-            
-            
-<div class="key-accordion">
-    <div class="key-acc-header" onclick="toggleAccordion(this)">
-        <span>🎧 Listening Test Answer Key</span>
-        <span>▼</span>
-    </div>
-    <div class="key-acc-body">
-        <h3>Section 1</h3>
-        <table>
-<thead><tr>
-<th>Q</th>
-<th>Answer</th>
-<th>Notes</th>
-</tr></thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Mitchell</td>
-<td>Spelled out in transcript: M-I-T-C-H-E-L-L</td>
-</tr>
-<tr>
-<td>2</td>
-<td>07700 943 662</td>
-<td>Sarah corrects herself — final digit is 2, not 1</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Environmental</td>
-<td>"Environmental Studies"</td>
-</tr>
-<tr>
-<td>4</td>
-<td>library</td>
-<td>"near the library" — specifically the university library</td>
-</tr>
-<tr>
-<td>5</td>
-<td>650</td>
-<td>Six hundred and fifty pounds</td>
-</tr>
-<tr>
-<td>6</td>
-<td>15th / fifteenth (of)</td>
-<td>"the fifteenth of September"</td>
-</tr>
-<tr>
-<td>7</td>
-<td><strong>B</strong></td>
-<td>Water and internet are included (electricity and gas are extra)</td>
-</tr>
-<tr>
-<td>8</td>
-<td><strong>B</strong></td>
-<td>"too far" — 20-minute bus ride; she wants to walk</td>
-</tr>
-<tr>
-<td>9</td>
-<td><strong>B</strong></td>
-<td>The agent says it can be arranged for Saturday morning</td>
-</tr>
-<tr>
-<td>10</td>
-<td><strong>C</strong></td>
-<td>She decides to call back after checking with her flatmate</td>
-</tr>
-</tbody></table>
-        <h3>Section 2</h3>
-        <table>
-<thead><tr>
-<th>Q</th>
-<th>Answer</th>
-<th>Notes</th>
-</tr></thead>
-<tbody>
-<tr>
-<td>11</td>
-<td><strong>A</strong></td>
-<td>Ticket office — "the very first room on the left-hand side"</td>
-</tr>
-<tr>
-<td>12</td>
-<td><strong>B</strong></td>
-<td>Café — "the next room along on the left"</td>
-</tr>
-<tr>
-<td>13</td>
-<td><strong>C</strong></td>
-<td>Ancient History Gallery — "carrying on up the left-hand side, room C"</td>
-</tr>
-<tr>
-<td>14</td>
-<td><strong>D</strong></td>
-<td>Children's Activity Room — "above that, room D"</td>
-</tr>
-<tr>
-<td>15</td>
-<td><strong>G</strong></td>
-<td>Temporary Exhibition Hall — "room G, over on the right side towards the top"</td>
-</tr>
-<tr>
-<td>16</td>
-<td>cotton mill</td>
-<td>"originally constructed as a cotton mill"</td>
-</tr>
-<tr>
-<td>17</td>
-<td>March</td>
-<td>"open on the first of March"</td>
-</tr>
-<tr>
-<td>18</td>
-<td>headphones</td>
-<td>"you can use headphones at various stations"</td>
-</tr>
-<tr>
-<td>19</td>
-<td>workshops</td>
-<td>"free workshops for children"</td>
-</tr>
-<tr>
-<td>20</td>
-<td>courtyard</td>
-<td>"located behind the courtyard"</td>
-</tr>
-</tbody></table>
-        <h3>Section 3</h3>
-        <table>
-<thead><tr>
-<th>Q</th>
-<th>Answer</th>
-<th>Notes</th>
-</tr></thead>
-<tbody>
-<tr>
-<td>21</td>
-<td><strong>B</strong></td>
-<td>How cities can increase their use of renewable energy</td>
-</tr>
-<tr>
-<td>22</td>
-<td><strong>C</strong></td>
-<td>"The structure is clear and well-organised"</td>
-</tr>
-<tr>
-<td>23</td>
-<td><strong>A</strong></td>
-<td>Most residents didn't know about government incentives</td>
-</tr>
-<tr>
-<td>24</td>
-<td><strong>A</strong></td>
-<td>Online survey responses were incomplete</td>
-</tr>
-<tr>
-<td>25</td>
-<td><strong>A</strong></td>
-<td>Recommends conducting interviews with city planners</td>
-</tr>
-<tr>
-<td>26</td>
-<td><strong>A</strong></td>
-<td>Solar panels: can be installed on existing buildings</td>
-</tr>
-<tr>
-<td>27</td>
-<td><strong>E</strong></td>
-<td>Small wind turbines: creates local employment opportunities</td>
-</tr>
-<tr>
-<td>28</td>
-<td><strong>F</strong></td>
-<td>Ground-source heat pumps: requires very little maintenance</td>
-</tr>
-<tr>
-<td>29</td>
-<td><strong>G</strong></td>
-<td>Biomass heating: can be combined with other energy systems</td>
-</tr>
-<tr>
-<td>30</td>
-<td><strong>B</strong></td>
-<td>Micro-hydropower: produces no noise</td>
-</tr>
-</tbody></table>
-        <h3>Section 4</h3>
-        <p>| Q | Answer | Notes |
-|</p>
-    </div>
-</div>
-
-            
-            
-<div class="key-accordion">
-    <div class="key-acc-header" onclick="toggleAccordion(this)">
-        <span>📖 Reading Test Answer Key</span>
-        <span>▼</span>
-    </div>
-    <div class="key-acc-body">
-        <h3>Passage 1</h3>
-        <table>
-<thead><tr>
-<th>Question</th>
-<th>Answer</th>
-<th>Explanation</th>
-</tr></thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>TRUE</td>
-<td>Paragraph A states "approximately 800 million people worldwide."</td>
-</tr>
-<tr>
-<td>2</td>
-<td>FALSE</td>
-<td>Paragraph B states "nearly 70 percent," not more than 80 percent.</td>
-</tr>
-<tr>
-<td>3</td>
-<td>NOT GIVEN</td>
-<td>Government funding for the Michigan Urban Farming Initiative is not mentioned.</td>
-</tr>
-<tr>
-<td>4</td>
-<td>TRUE</td>
-<td>Paragraph D states "imports over 90 percent of its food."</td>
-</tr>
-<tr>
-<td>5</td>
-<td>FALSE</td>
-<td>Paragraph D states the systems "use minimal water."</td>
-</tr>
-<tr>
-<td>6</td>
-<td>viii</td>
-<td>Paragraph B discusses why cities urgently need new approaches to food supply (population growth, supply chain issues).</td>
-</tr>
-<tr>
-<td>7</td>
-<td>v</td>
-<td>Paragraph C describes how urban farming rebuilds communities in Detroit and London.</td>
-</tr>
-<tr>
-<td>8</td>
-<td>ii</td>
-<td>Paragraph D focuses on Singapore's use of technology (vertical farming) to grow food locally.</td>
-</tr>
-<tr>
-<td>9</td>
-<td>iii</td>
-<td>Paragraph E discusses challenges: space, soil contamination, regulations.</td>
-</tr>
-<tr>
-<td>10</td>
-<td>affordable</td>
-<td>Paragraph B mentions providing "fresh, affordable food."</td>
-</tr>
-<tr>
-<td>11</td>
-<td>vertical</td>
-<td>Paragraph D describes "vertical farming."</td>
-</tr>
-<tr>
-<td>12</td>
-<td>stacked</td>
-<td>Paragraph D states "crops are grown in stacked layers."</td>
-</tr>
-<tr>
-<td>13</td>
-<td>contaminated</td>
-<td>Paragraph E states "many urban sites are contaminated with heavy metals."</td>
-</tr>
-</tbody></table>---
-        <h3>Passage 2</h3>
-        <table>
-<thead><tr>
-<th>Question</th>
-<th>Answer</th>
-<th>Explanation</th>
-</tr></thead>
-<tbody>
-<tr>
-<td>14</td>
-<td>B</td>
-<td>Paragraph B mentions the hippocampus replaying learning experiences during deep sleep.</td>
-</tr>
-<tr>
-<td>15</td>
-<td>D</td>
-<td>Paragraph D states shorter naps "reduce errors on attention-based tasks."</td>
-</tr>
-<tr>
-<td>16</td>
-<td>E</td>
-<td>Paragraph E explains the circadian rhythm shift in young people.</td>
-</tr>
-<tr>
-<td>17</td>
-<td>A</td>
-<td>Paragraph A provides the American College Health Association survey statistics.</td>
-</tr>
-<tr>
-<td>18</td>
-<td>E</td>
-<td>Paragraph E mentions Carskadon's recommendation for "more flexible scheduling options."</td>
-</tr>
-<tr>
-<td>19</td>
-<td>B</td>
-<td>Paragraph B: students "scored, on average, 10 percent lower."</td>
-</tr>
-<tr>
-<td>20</td>
-<td>C</td>
-<td>Paragraph C: REM sleep is "particularly important for creative problem-solving and the integration of complex ideas."</td>
-</tr>
-<tr>
-<td>21</td>
-<td>B</td>
-<td>Paragraph D: a nap "could improve performance on learning tasks by as much as 20 percent."</td>
-</tr>
-<tr>
-<td>22</td>
-<td>C</td>
-<td>Paragraph E: Carskadon recommended "more flexible scheduling options."</td>
-</tr>
-<tr>
-<td>23</td>
-<td>NO</td>
-<td>Paragraph D: Mednick "cautioned that napping is not a substitute for a full night's sleep."</td>
-</tr>
-<tr>
-<td>24</td>
-<td>NO</td>
-<td>Paragraph A: "similar patterns have been observed in studies from the United Kingdom, Australia, South Korea, and numerous other countries."</td>
-</tr>
-<tr>
-<td>25</td>
-<td>NO</td>
-<td>Paragraph F: advises students to "avoid caffeine after mid-afternoon" because "its stimulating effects can last for six hours or more."</td>
-</tr>
-<tr>
-<td>26</td>
-<td>YES</td>
-<td>Paragraph F: students should view sleep as "just as important as attending lectures or completing assignments."</td>
-</tr>
-</tbody></table>---
-        <h3>Passage 3</h3>
-        <table>
-<thead><tr>
-<th>Question</th>
-<th>Answer</th>
-<th>Explanation</th>
-</tr></thead>
-<tbody>
-<tr>
-<td>27</td>
-<td>time</td>
-<td>Paragraph B: "across countries and over time."</td>
-</tr>
-<tr>
-<td>28</td>
-<td>the people around them</td>
-<td>Paragraph B: "relative to the people around them."</td>
-</tr>
-<tr>
-<td>29</td>
-<td>hedonic treadmill</td>
-<td>Paragraph D: Kahneman described this as a "hedonic treadmill."</td>
-</tr>
-<tr>
-<td>30</td>
-<td>logarithmic</td>
-<td>Paragraph E: "roughly logarithmic relationship."</td>
-</tr>
-<tr>
-<td>31</td>
-<td>Gross National Happiness</td>
-<td>Paragraph F: "Gross National Happiness (GNH)."</td>
-</tr>
-<tr>
-<td>32</td>
-<td>B</td>
-<td>Paragraph C: Andrew Clark's experiment with income comparison scenarios.</td>
-</tr>
-<tr>
-<td>33</td>
-<td>A</td>
-<td>Paragraph B: Easterlin's paradox about national income and happiness.</td>
-</tr>
-<tr>
-<td>34</td>
-<td>C</td>
-<td>Paragraph D: Kahneman and Deaton identified the $75,000 threshold.</td>
-</tr>
-<tr>
-<td>35</td>
-<td>E</td>
-<td>Paragraph E: Killingsworth used "a smartphone-based experience sampling method."</td>
-</tr>
-<tr>
-<td>36</td>
-<td>D</td>
-<td>Paragraph E: Stevenson and Wolfers analysed "data from 155 countries."</td>
-</tr>
-<tr>
-<td>37–38</td>
-<td>B, D</td>
-<td>Paragraph G: "meaningful work" and "physical health" are listed as predictors of well-being.</td>
-</tr>
-<tr>
-<td>39–40</td>
-<td>B, D</td>
-<td>Paragraph F: "reducing inequality" and "investing in areas such as mental health."</td>
-</tr>
-</tbody></table>---
-    </div>
-</div>
-
-        </div>
-    </div>
-
-    <script>
-        // Tab switching logic
-        function openTab(tabId) {
-            const tabs = document.querySelectorAll('.tab-content');
-            const btns = document.querySelectorAll('.tab-btn');
-            tabs.forEach(tab => tab.classList.remove('active'));
-            btns.forEach(btn => btn.classList.remove('active'));
-            
-            document.getElementById(tabId).classList.add('active');
-            
-            // Set tab btn active
-            event.currentTarget.classList.add('active');
-        }
-
-        // Theme toggle logic
-        function toggleTheme() {
-            const body = document.body;
-            const btn = document.querySelector('.theme-toggle');
-            if (body.classList.contains('light-mode')) {
-                body.classList.remove('light-mode');
-                btn.innerHTML = '☀️ Light Mode';
-            } else {
-                body.classList.add('light-mode');
-                btn.innerHTML = '🌙 Dark Mode';
-            }
-        }
-
-        // Toggle Audio Transcript visibility
-        function toggleTranscript(header) {
-            const body = header.nextElementSibling;
-            if (body.style.display === 'block') {
-                body.style.display = 'none';
-            } else {
-                body.style.display = 'block';
-            }
-        }
-
-        // Accordion visibility for answers
-        function toggleAccordion(header) {
-            const body = header.nextElementSibling;
-            if (body.style.display === 'block') {
-                body.style.display = 'none';
-            } else {
-                body.style.display = 'block';
-            }
-        }
-
-        // Reading passage selector
-        function openReadingPassage(passageId) {
-            const passages = document.querySelectorAll('.passage-text');
-            passages.forEach(p => p.style.display = 'none');
-            document.getElementById(passageId).style.display = 'block';
-            
-            const qs = document.querySelectorAll('.passage-questions');
-            qs.forEach(q => q.style.display = 'none');
-            document.getElementById(passageId + '-qs').style.display = 'block';
-            
-            const btns = event.currentTarget.parentElement.querySelectorAll('.tab-btn');
-            btns.forEach(btn => btn.classList.remove('active'));
-            event.currentTarget.classList.add('active');
-        }
-
-        // Essay live word counter
-        function updateWordCount(textarea, counterId) {
-            const text = textarea.value.trim();
-            const words = text ? text.split(/\s+/).length : 0;
-            document.getElementById(counterId).innerText = `Word Count: ${words}`;
-        }
-
-        // Play Simulation helper
-        let playInterval;
-        function togglePlay(btn) {
-            const progress = document.getElementById('trackProgress');
-            if (btn.innerText === '▶') {
-                btn.innerText = '⏸';
-                let width = parseFloat(progress.style.width) || 0;
-                playInterval = setInterval(() => {
-                    if (width >= 100) {
-                        clearInterval(playInterval);
-                        btn.innerText = '▶';
-                        width = 0;
-                    } else {
-                        width += 0.5;
-                        progress.style.width = width + '%';
-                    }
-                }, 100);
-            } else {
-                btn.innerText = '▶';
-                clearInterval(playInterval);
-            }
-        }
-
-        function seekTrack(event) {
-            const track = event.currentTarget;
-            const rect = track.getBoundingClientRect();
-            const clickX = event.clientX - rect.left;
-            const percentage = (clickX / rect.width) * 100;
-            document.getElementById('trackProgress').style.width = percentage + '%';
-        }
-
-        // Listening answers dictionary
-        const lisKeys = {"1": "Mitchell", "2": "07700 943 662", "3": "Environmental", "4": "library", "5": "650", "6": "15th", "7": "B", "8": "B", "9": "B", "10": "C", "11": "A", "12": "B", "13": "C", "14": "D", "15": "G", "16": "cotton mill", "17": "March", "18": "headphones", "19": "workshops", "20": "courtyard", "21": "B", "22": "C", "23": "A", "24": "A", "25": "A", "26": "A", "27": "E", "28": "F", "29": "G", "30": "B", "31": "heuristics", "32": "first", "33": "supports", "34": "examples", "35": "pleasure", "36": "35,000", "37": "save time", "38": "moderately priced bottle", "39": "doctors", "40": "question assumptions"};
-        
-        // Reading answers dictionary
-        const readKeys = {"1": "TRUE", "2": "FALSE", "3": "NOT GIVEN", "4": "TRUE", "5": "FALSE", "6": "viii", "7": "v", "8": "ii", "9": "iii", "10": "affordable", "11": "vertical", "12": "stacked", "13": "contaminated", "14": "B", "15": "D", "16": "E", "17": "A", "18": "E", "19": "B", "20": "C", "21": "B", "22": "C", "23": "NO", "24": "NO", "25": "NO", "26": "YES", "27": "time", "28": "the people around them", "29": "hedonic treadmill", "30": "logarithmic", "31": "Gross National Happiness", "32": "B", "33": "A", "34": "C", "35": "E", "36": "D", "37": "B", "38": "D", "39": "B", "40": "D"};
-
-        // Answer checking logic
-        function checkListeningAnswers() {
-            let correctCount = 0;
-            for (let q in lisKeys) {
-                const input = document.getElementById('lis-q' + q);
-                if (input) {
-                    const userVal = input.value.trim().toLowerCase();
-                    const expectedVal = lisKeys[q].toLowerCase();
-                    
-                    const isCorrect = userVal === expectedVal || expectedVal.split('/').some(alt => alt.trim().toLowerCase() === userVal);
-                    
-                    if (isCorrect) {
-                        input.className = 'q-input correct-ans';
-                        correctCount++;
-                    } else {
-                        input.className = 'q-input wrong-ans';
-                        let feedback = input.nextElementSibling;
-                        if (!feedback || !feedback.classList.contains('feedback-message')) {
-                            feedback = document.createElement('span');
-                            feedback.className = 'feedback-message feedback-wrong';
-                            input.parentNode.appendChild(feedback);
-                        }
-                        feedback.innerHTML = `✗ (Expected: ${lisKeys[q]})`;
-                    }
-                }
-            }
-            alert(`Listening Test Checked! You scored: ${correctCount} / 40`);
-            document.getElementById('calc-lis-raw').value = correctCount;
-            calculateBands();
-        }
-
-        function checkReadingAnswers() {
-            let correctCount = 0;
-            for (let q in readKeys) {
-                const input = document.getElementById('read-q' + q);
-                if (input) {
-                    const userVal = input.value.trim().toLowerCase();
-                    const expectedVal = readKeys[q].toLowerCase();
-                    
-                    const isCorrect = userVal === expectedVal || expectedVal.split('/').some(alt => alt.trim().toLowerCase() === userVal);
-                    
-                    if (isCorrect) {
-                        input.className = 'q-input correct-ans';
-                        correctCount++;
-                    } else {
-                        input.className = 'q-input wrong-ans';
-                        let feedback = input.nextElementSibling;
-                        if (!feedback || !feedback.classList.contains('feedback-message')) {
-                            feedback = document.createElement('span');
-                            feedback.className = 'feedback-message feedback-wrong';
-                            input.parentNode.appendChild(feedback);
-                        }
-                        feedback.innerHTML = `✗ (Expected: ${readKeys[q]})`;
-                    }
-                }
-            }
-            alert(`Reading Test Checked! You scored: ${correctCount} / 40`);
-            document.getElementById('calc-read-raw').value = correctCount;
-            calculateBands();
-        }
-
-        // Bands conversion calculations
-        function getListeningBand(rawScore) {
-            if (rawScore >= 39) return 9.0;
-            if (rawScore >= 37) return 8.5;
-            if (rawScore >= 35) return 8.0;
-            if (rawScore >= 32) return 7.5;
-            if (rawScore >= 30) return 7.0;
-            if (rawScore >= 26) return 6.5;
-            if (rawScore >= 23) return 6.0;
-            if (rawScore >= 18) return 5.5;
-            if (rawScore >= 16) return 5.0;
-            if (rawScore >= 13) return 4.5;
-            if (rawScore >= 10) return 4.0;
-            return 3.5;
-        }
-
-        function getReadingBand(rawScore) {
-            if (rawScore >= 39) return 9.0;
-            if (rawScore >= 37) return 8.5;
-            if (rawScore >= 35) return 8.0;
-            if (rawScore >= 33) return 7.5;
-            if (rawScore >= 30) return 7.0;
-            if (rawScore >= 27) return 6.5;
-            if (rawScore >= 23) return 6.0;
-            if (rawScore >= 20) return 5.5;
-            if (rawScore >= 16) return 5.0;
-            if (rawScore >= 13) return 4.5;
-            if (rawScore >= 10) return 4.0;
-            return 3.5;
-        }
-
-        function calculateBands() {
-            const lisRaw = parseInt(document.getElementById('calc-lis-raw').value) || 0;
-            const readRaw = parseInt(document.getElementById('calc-read-raw').value) || 0;
-            
-            const lisBand = getListeningBand(lisRaw);
-            const readBand = getReadingBand(readRaw);
-            const writeBand = parseFloat(document.getElementById('calc-write').value) || 5.5;
-            const speakBand = parseFloat(document.getElementById('calc-speak').value) || 5.5;
-
-            const average = (lisBand + readBand + writeBand + speakBand) / 4;
-            
-            const fractionalPart = average - Math.floor(average);
-            let rounded = Math.floor(average);
-            if (fractionalPart >= 0.75) {
-                rounded += 1.0;
-            } else if (fractionalPart >= 0.25) {
-                rounded += 0.5;
-            }
-
-            document.getElementById('overallBand').innerText = rounded.toFixed(1);
-            
-            let desc = "Competent User";
-            if (rounded >= 8.0) desc = "Very Good User";
-            else if (rounded >= 7.0) desc = "Good User";
-            else if (rounded >= 6.0) desc = "Competent User";
-            else if (rounded >= 5.0) desc = "Modest User";
-            else desc = "Limited User";
-            
-            document.getElementById('bandDescription').innerText = desc;
-        }
-    </script>
 </body>
 </html>
